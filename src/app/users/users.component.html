@@ -1,0 +1,25 @@
+ <!-- <ag-grid-angular 
+    style="width: 450px; height: 250px;" 
+    class="ag-theme-balham"
+    [rowData]="rowData" 
+    [columnDefs]="columnDefs"
+    >
+</ag-grid-angular> -->
+<div class="container">
+    <h2>User Information</h2>
+<table>
+    <th>Name</th>
+    <th>Age</th>
+    <tbody>
+        <tr *ngFor="let data of Userdata">
+            <td>{{data.name}}</td>
+            <td>{{data.age}}</td>
+        </tr>
+    </tbody>
+</table>
+<h3>Toggle the content</h3>
+<button type="button" class="btn btn-success" (click)="togglethis()">Toggle</button>
+<ng-template #data><h3>True</h3></ng-template>
+<div *ngIf="display; else data"><h3>False</h3></div>
+
+</div>
